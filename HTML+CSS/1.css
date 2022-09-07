@@ -1,0 +1,11 @@
+.button {
+    max-width: 5vw;
+    padding-left: 22px;
+    max-height: 46px;
+    size-adjust: 2px;
+    width: 10vw;
+
+    border-color: aqua;
+    background-color: rgba(215, 139, 63);
+    font-size: 5
+}
