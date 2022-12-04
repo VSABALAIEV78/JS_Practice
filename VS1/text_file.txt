@@ -1,2 +1,3 @@
 test file
 created at 'develop_vs' branch
+added line #3 to this file
