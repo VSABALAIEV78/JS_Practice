@@ -33,4 +33,40 @@ console.log(`https://pn.com.ua/${someObject}`);
 console.log(`https://pn.com.ua/${MonitorPart1}/${MonitorPart2}`);
 
 
-console.log(2*2 !== +'4');
+console.log(2 * 2 !== +'4');
+
+
+const webSite = 'md/2011825';
+const myCode = 'is_crazy';
+
+//console.log('https://pn.com.ua/' + webSite);
+
+console.log(`https://pn.com.ua/${webSite}/${myCode}}`);
+
+
+const number1 = 5;
+const number2 = '11';
+let result01;
+
+console.log(result01 = number1 + number2 + 0.11);
+
+let yourAge = +'55';
+
+console.log(yourAge);
+console.log(typeof (yourAge));
+
+
+let incr = 10,
+    decr = 10;
+
+incr++;
+decr--;
+console.log(incr, decr);
+
+
+let a1 = 3,
+    a2 = 2,
+    c;
+
+console.log(c = a1 % a2);
+console.log(9 % 4);
