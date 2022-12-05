@@ -1,5 +1,4 @@
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-console.log('Посмотрено фильмов: ' + numberOfFilms);
 
 const personalMovieDB = {
     count: '',
@@ -13,15 +12,12 @@ const personalMovieDB = {
     privat: false
 };
 
-const movies = {
-
-};
+personalMovieDB.count = numberOfFilms;
 
 const filmName = prompt('Один из последних посмотренных фильмов?', '');
 const score = +prompt('На сколько оцените его?', '');
 
+personalMovieDB.movies[filmName] = score;
 
-movies[filmName] = score;
-
-// got a solution. works with [], but not with the dot > movies.filmName
-console.log(movies);
+// got a solution. works with [], but not with the dot > movies.filmName v.2
+console.log(personalMovieDB.movies);
