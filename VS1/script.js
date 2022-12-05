@@ -1,4 +1,6 @@
-const numberOfFilms = {
+let numberOfFilms;
+
+const personalMovieDB = {
     count: '',
     movies: {
 
@@ -8,4 +10,8 @@ const numberOfFilms = {
     },
     genres: [],
     privat: false
+};
+
+const movies = {
+
 };
