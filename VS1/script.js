@@ -13,6 +13,12 @@ const personalMovieDB = {
     privat: false
 };
 
-const movies = {
 
+let filmName = prompt('Один из последних посмотренных фильмов?', '');
+let filmScore = +prompt('На сколько оцените его?', '');
+
+let movies = {
+    filmName: filmScore
 };
+// semi-solution > filmName is not rewrited
+console.log(movies);
