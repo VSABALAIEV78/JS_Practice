@@ -56,3 +56,95 @@ switch (num2) {
         console.log('wtf?');
         break;
 }
+
+
+//
+//
+//
+
+
+const hamburger = 3;
+const fries = 3;
+const cola = 0;
+const nuggets = 2;
+
+if (hamburger === 3 && cola || fries === 3 && nuggets) {
+    console.log('Done!');
+}
+
+
+let hamburger;
+const fries = NaN;
+const cola = 0;
+const nuggets = 2;
+
+if (hamburger || cola || fries === 3 || nuggets) {
+    console.log('Done!')
+}
+
+
+
+let hamburger;
+const fries = NaN;
+const cola = 0;
+const nuggets = 2;
+
+if (hamburger && cola || fries === 3 && nuggets) {
+    console.log('Done!');
+} else {
+    console.log("is not running");
+}
+
+//
+// циклы
+
+let m1 = 10; // let - так как переменная будет менятся
+
+// while (m1 < 15) {
+// 	console.log(m1);
+// 	m1++;
+// }
+
+do {
+    console.log(m1);
+    m1++;
+}
+while (m1 !== 17);
+
+
+
+
+for (let i = 1; i < 5; i++) {
+    console.log(i);
+}
+
+
+let m2 = 10;
+
+for (let i = 1; i < 5; i++) {
+    console.log(m2);
+    m2++;
+}
+
+
+for (let i = 1; i < 8; i++) {
+    if (i === 4) {
+        break;
+    }
+    console.log(i);
+}
+
+for (let i = 1; i < 8; i++) {
+    if (i === 4) {
+        continue;
+    }
+    console.log(i);
+}
+
+// task # 23 (* tree)
+let ast = '*';
+
+for (let i = 0; i < 7; i++) {
+    console.log(ast);
+    ast = ast + '*';
+}
