@@ -100,10 +100,10 @@ if (hamburger && cola || fries === 3 && nuggets) {
 
 let m1 = 10; // let - так как переменная будет менятся
 
-// while (m1 < 15) {
-// 	console.log(m1);
-// 	m1++;
-// }
+while (m1 < 15) {
+    console.log(m1);
+    m1++;
+}
 
 do {
     console.log(m1);
@@ -144,7 +144,125 @@ for (let i = 1; i < 8; i++) {
 // task # 23 (* tree)
 let ast = '*';
 
-for (let i = 0; i < 7; i++) {
+first: for (let i = 0; i < 100; i++) {
     console.log(ast);
-    ast = ast + '*';
+    ast += '*';
+    if (ast === '**********') {
+        break first;
+    }
 }
+console.log()
+
+
+//task 23.3
+
+// 1st 
+
+for (let i = 5; i <= 10; i++) {
+    console.log(i);
+}
+
+// 2nd
+
+for (let i = 20; i >= 10; i--) {
+    console.log(i)
+    if (i == 14) {
+        break;
+    }
+}
+
+// 3rd
+
+for (let i = 2; i <= 10; i += 2) {
+    console.log(i);
+}
+
+// 4th
+
+for (let i = 2; i <= 16; i++) {
+    if (i % 2 === 0) {
+        continue;
+    } else {
+        console.log(i);
+    }
+}
+
+// solution for 4 with 'while'
+
+
+let i = 2;
+while (i < 16) {
+    i++;
+    if (i % 2 === 0) {
+        continue;
+    } else {
+        console.log(i);
+    }
+}
+
+
+
+// 5th
+
+
+// const arrayOfNumbers = [];
+
+// for (i = 5; i <= 10; i++) {
+//     arrayOfNumbers.push(i);
+// }
+// console.log(arrayOfNumbers);
+
+
+
+function fifthTask() {
+    const arrayOfNumbers = [];
+    for (let i = 5; i <= 10; i++) {
+        //arrayOfNumbers.push(i);
+        arrayOfNumbers[i - 5] = i;
+    }
+    console.log(arrayOfNumbers);
+
+    // Не трогаем
+    return arrayOfNumbers;
+
+}
+
+
+//task 23.4 
+// ex.1
+
+const arr = [3, 5, 8, 16, 20, 23, 50];
+const result = [];
+
+for (let i = 0; i < arr.length; i++) {
+    result[i] = arr[i];
+}
+console.log(result);
+
+
+// ex.2
+
+const data = [5, 10, 'Shopping', 20, 'Homework'];
+console.log(data);
+
+for (let i = 0; i < data.length; i++) {
+    if (typeof (data[i]) === 'number') {
+        data[i] = data[i] * 2;
+    } else if (typeof (data[i]) === 'string') {
+        data[i] = data[i] + ' - done';
+    }
+}
+console.log(data);
+
+// ex.3
+
+const data = [5, 10, 'Shopping', 20, 'Homework'];
+const result = [];
+
+for (let i = 0; i < data.length; i++) {
+    result[i] = data[data.length - 1 - i];
+}
+console.log(result);
+
+//task 23.5
+// ex.1
