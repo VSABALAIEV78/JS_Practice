@@ -265,4 +265,50 @@ for (let i = 0; i < data.length; i++) {
 console.log(result);
 
 //task 23.5
-// ex.1
+// ex.1  tree ***
+
+const lines = 5;
+let result8 = '';
+for (let i = 0; i <= lines; i++) {
+
+    for (let j = 0; j < lines - i; j++) {
+        result8 += ' ';
+    }
+
+    for (let j = 0; j < 2 * i + 1; j++) {
+        result8 += '*';
+    }
+
+    result8 += '\n';
+}
+
+console.log(result8);
+
+
+
+
+
+console.log('text here \n some \n of\n it');
+
+
+
+
+
+
+
+
+
+// const lines = 5;
+// let result = '';
+
+// for (let i = 0; i <= lines; i++) {
+//     for (let j = 0; j < lines - i; j++) {
+//         result += " ";
+//     }
+//     for (let j = 0; j < 2 * i + 1; j++) {
+//         result += "*";
+//     }
+//     result += "\n";
+// }
+
+// console.log(result)
