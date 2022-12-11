@@ -6,22 +6,20 @@ function calculateVolumeAndArea(side) {
     let volume,
         sCube;
 
-    for (let i = 0; i < 1; i++) {
-        let result;
+    let result;
 
-        if (typeof (side) === 'string' || side <= 0 || side === '' || side === null ||
-            !Number.isInteger(side)) {
+    if (typeof (side) === 'string' || side <= 0 || side === '' || side === null ||
+        !Number.isInteger(side)) {
 
-            result = `При вычислении произошла ошибка`;
+        result = `При вычислении произошла ошибка`;
 
-        } else {
-            volume = side * side * side;
-            sCube = (side * side) * 6;
-            result = `Объем куба: ${volume}, площадь всей поверхности: ${sCube}`;
+    } else {
+        volume = side * side * side;
+        sCube = (side * side) * 6;
+        result = `Объем куба: ${volume}, площадь всей поверхности: ${sCube}`;
 
-        }
-        return result;
     }
+    return result;
 
 }
 //console.log(calculateVolumeAndArea(5.2));
