@@ -22,7 +22,7 @@ function calculateVolumeAndArea(side) {
     return result;
 
 }
-//console.log(calculateVolumeAndArea(5.2));
+//console.log(calculateVolumeAndArea(14.2));
 
 //task 29.2
 
@@ -41,6 +41,6 @@ function getCoupeNumber(seatNum) {
     }
 }
 
-console.log(getCoupeNumber(37));
+//console.log(getCoupeNumber(9));
 
 // solved with small hint with formula >>> (seatNum -1) / 4 + 1
