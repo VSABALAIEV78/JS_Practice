@@ -71,7 +71,8 @@ function getTimeFromMinutes(minutes) {
 
 }
 
-console.log(getTimeFromMinutes(83));
+//console.log(getTimeFromMinutes(83));
+// FYI: можно было решить с помощью switch () === строгое сравнение
 
 
 ////task 29.4 (8) - show max number from 4
@@ -91,3 +92,34 @@ function findMaxNumber(a, b, c, d) {
 
 
 //console.log(findMaxNumber(-2, 1, 2, 3, 4, 5, 6, 555));
+// correct solution
+
+////task 29.5 (9) - fibonacci 
+
+function fib(arg) {
+
+    if (typeof (arg) !== 'number' || !Number.isInteger(arg) || arg < 0) {
+        return '';
+    } else if (arg === 0) {
+        return '';
+    } else if (arg === 1) {
+        return '0';
+    } else if (arg === 2) {
+        return '0 1';
+    }
+
+    let fib = [0, 1];
+
+    for (let i = 2; i < arg; i++) {
+
+        fib[i] = fib[i - 2] + fib[i - 1];
+    }
+
+    let res = fib.toString();
+    return res.replace(/[,]/g, ' ');
+
+}
+
+console.log(fib(7));
+
+// task 29.5 (9) - fibonacci > solved without tips
