@@ -1,6 +1,6 @@
 'use sctrict';
 
-//task 29.1
+//task 29.1 (7)
 
 function calculateVolumeAndArea(side) {
     let volume,
@@ -24,7 +24,7 @@ function calculateVolumeAndArea(side) {
 }
 //console.log(calculateVolumeAndArea(14.2));
 
-//task 29.2
+//task 29.2 (7)
 
 function getCoupeNumber(seatNum) {
     for (let i = 0; i < 1; i++) {
@@ -44,3 +44,50 @@ function getCoupeNumber(seatNum) {
 //console.log(getCoupeNumber(9));
 
 // solved with small hint with formula >>> (seatNum -1) / 4 + 1
+
+////task 29.3 (8) - minutes to hours and minutes
+
+function getTimeFromMinutes(minutes) {
+
+    let hours,
+        min;
+
+    if (typeof (minutes) !== 'number' || !Number.isInteger(minutes) || minutes < 0) {
+        return 'Ошибка, проверьте данные';
+    }
+
+    hours = parseInt(minutes / 60);
+    min = minutes - hours * 60;
+
+    if (hours > 1 && hours < 5) {
+        return `Это ${hours} часа и ${min} минут`;
+
+    } else if (hours === 1) {
+        return `Это ${hours} час и ${min} минут`;
+
+    } else {
+        return `Это ${hours} часов и ${min} минут`;
+    }
+
+}
+
+console.log(getTimeFromMinutes(83));
+
+
+////task 29.4 (8) - show max number from 4
+
+function findMaxNumber(a, b, c, d) {
+
+    if (typeof (a) !== 'number' || typeof (b) !== 'number' || typeof (c) !== 'number' ||
+        typeof (d) !== 'number' || a === undefined || b === undefined || c === undefined ||
+        d === undefined) {
+
+        return 0;
+    }
+
+    return Math.max(a, b, c, d);
+
+}
+
+
+//console.log(findMaxNumber(-2, 1, 2, 3, 4, 5, 6, 555));
