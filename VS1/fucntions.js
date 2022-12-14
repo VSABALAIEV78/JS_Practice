@@ -120,6 +120,21 @@ function fib(arg) {
 
 }
 
-console.log(fib(7));
+console.log(fib(10));
 
 // task 29.5 (9) - fibonacci > solved without tips
+
+
+//callback functions - последовательно выполняет функцию
+
+function first(language, callBack) {
+    console.log(`В языке ${language}  я изучаю CALL_BACK function`);
+    callBack(); // функция funcCallBackvs - callBack > выполнится внутри first
+}
+
+first('JS', funcCallBackvs); // funcCallBackvs это = аргумент callBack
+// а так же навание функции funcCallBackvs()
+
+function funcCallBackvs() {
+    console.log(`А вот и сама функция коллбек vs > выполняется после 'first'`);
+}
