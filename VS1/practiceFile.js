@@ -128,8 +128,30 @@ function availableCurr(arr, missingCurr) {
             curr1 += `${arr}\n`;
         }
     });
+
     return curr1;
+
+
 
 }
 
 console.log(availableCurr(arr, 'USD'));
+
+
+
+const main = {
+    health: 500,
+    armor: 100,
+    showLog: function () {
+        console.log('Working');
+    }
+};
+
+const s1 = Object.create(main);
+
+const s2 = {};
+Object.setPrototypeOf(s2, main);
+
+
+
+console.log(s2.health);
