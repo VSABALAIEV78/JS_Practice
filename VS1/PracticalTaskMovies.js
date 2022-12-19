@@ -9,8 +9,15 @@ const personalMovieDB = {
     movies: {},
     actors: {},
     genres: [],
-    privat: false
+    privat: true,
+    showMyDB: function () {
+        if (personalMovieDB.privat !== true) {
+            console.log(personalMovieDB);
+        }
+    }
 };
+
+personalMovieDB.showMyDB();
 
 // 1st question
 first: for (let i = 0; i < 1; i++) {
@@ -63,5 +70,5 @@ for (let i = 0; i < 1; i++) {
     }
 }
 
-console.log(personalMovieDB);
+//console.log(personalMovieDB);
 // finished task # 24.2 updated
