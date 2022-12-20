@@ -53,4 +53,33 @@ function isBudgetEnough(data) {
 }
 
 isBudgetEnough(shoppingMallData);
-//solved
+// Task # 37. 13 (shops budget) solved
+
+// Task # 37. 14 (list of students)
+
+const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
+
+function sortStudentsByGroups(arr) {
+    arr.sort();
+    console.log(arr);
+    const newArr = [];
+
+    for (let i = 0; i < 9; i += 3) {
+        newArr.push(arr.slice(i, i + 3));
+    }
+
+    if (arr.length == 9) {
+        newArr.push('Оставшиеся студенты: -');
+        return newArr;
+
+    } else {
+        newArr.push(`Оставшиеся студенты: ${arr[9]}`);
+        for (let j = 10; j < arr.length; j++) {
+            newArr[3] += `, ${arr[j]}`;
+        }
+        return newArr;
+    }
+}
+sortStudentsByGroups(students);
+
+// Task # 37. 14 (list of students). Solved with google help.
