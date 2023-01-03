@@ -1,14 +1,70 @@
 'use strict';
 
-// Какое будет выведено значение: let x = 5; alert( x++ ); ?// == 5 так как ПОСТФИКСНАЯ запись
-// Чему равно такое выражение: [ ] + false - null + true ?//   error? undefined? == string 'NaN'
-// Что выведет этот код: let y = 1; let x = y = 2; alert(x); ?// 2
-// Чему равна сумма [ ] + 1 + 2? // '12' string
-// Что выведет этот код: alert( "1"[0] )? // == 1
-// Чему равно 2 && 1 && null && 0 && undefined ? // false - null
-// Есть ли разница между выражениями? !!( a && b ) и (a && b)? // == false (true и b)
-// Что выведет этот код: alert( null || 2 && 3 || 4 ); ? // true ==  3 
-// a = [1, 2, 3]; b = [1, 2, 3]; Правда ли что a == b ?// false ?
-// Что выведет этот код: alert( +"Infinity" ); ?// == Infinity как число
-// Верно ли сравнение: "Ёжик" > "яблоко"?// false
-// Чему равно 0 || "" || 2 || undefined || true || falsе ? // (2) true
+const restorantData = {
+    menu: [{
+            name: 'Salad Caesar',
+            price: '14$'
+        },
+        {
+            name: 'Pizza Diavola',
+            price: '9$'
+        },
+        {
+            name: 'Beefsteak',
+            price: '17$'
+        },
+        {
+            name: 'Napoleon',
+            price: '7$'
+        }
+    ],
+    waitors: [{
+        name: 'Alice',
+        age: 22
+    }, {
+        name: 'John',
+        age: 24
+    }],
+    averageLunchPrice: '20$',
+    openNow: true
+};
+
+function isOpen(prop) {
+    let answer = '';
+    (prop !== true) ? answer = 'Закрыто': answer = 'Открыто';
+
+    return answer;
+}
+
+console.log(isOpen(restorantData.openNow));
+
+function isAverageLunchPriceTrue(fDish, sDish, average) {
+
+    if (+fDish.price.slice(0, fDish.price.length - 1) +
+        (+sDish.price.slice(0, sDish.price.length - 1)) <
+        +average.slice(0, average.length - 1)) {
+        return 'Цена ниже средней';
+    } else {
+        return 'Цена выше средней';
+    }
+}
+
+console.log(isAverageLunchPriceTrue(restorantData.menu[0], restorantData.menu[1], restorantData.averageLunchPrice));
+
+function transferWaitors(data) {
+    const copy = {
+        waitors: []
+    };
+    const obj1 = Object.assign(copy.waitors, data.waitors);
+
+    copy.waitors[0] = {
+        name: 'Mike',
+        age: 32
+    };
+
+    return copy;
+}
+
+transferWaitors(restorantData);
+
+//Task 41.15 [] restraunt solved
