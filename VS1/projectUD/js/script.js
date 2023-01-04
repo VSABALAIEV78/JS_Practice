@@ -18,11 +18,11 @@ const movieDB = {
     movies: [
         "Марвел",
         "Логан vs",
-        "Лига справедливости",
+        "справедливости",
         "Ла-ла лэнд vs",
         "Одержимость",
         "Скотт Пилигрим против...",
-        "VSVS78"
+        "А как же VSVS78"
     ]
 };
 
@@ -30,17 +30,24 @@ const ads = document.getElementsByClassName('promo__adv'),
     genre = document.getElementsByClassName('promo__genre'),
     promoBG = document.getElementsByClassName('promo__bg'),
     filmsList = document.getElementsByClassName('promo__interactive-list'),
-    film = document.getElementsByClassName('promo__interactive-item');
+    film = document.getElementsByClassName('promo__interactive-item'),
+    AD = document.querySelectorAll('.promo__adv img');
 
 // 1) revome ADs
-ads[0].remove();
+
+//ads[0].remove();
+
+AD.forEach(item => {
+    item.remove();
+}); // уберет картинки, оставит рекламный блок
 
 // 2) change genre
 const div = document.createElement('div');
 div.classList.add('promo__genre');
 //genre[0].after(div1); - добавляет елемент в хтмл (не обязательно если  делать replace)
 div.innerHTML = 'ДРАМА'; // добавляет текст в div тег
-genre[0].replaceWith(div); // сам реплейс
+//genre[0].replaceWith(div); // сам реплейс
+genre[0].textContent = 'ДРРРАМА';
 
 // 3) change image bg
 
@@ -50,6 +57,8 @@ promoBG[0].style.cssText = 'background: url("img/bg.jpg") center center/cover no
 // 4) sorting films
 
 //console.log(film[0]);
+
+movieDB.movies.sort();
 
 const f1 = () => {
     for (let i = 0; i < 5; i++) {
@@ -67,6 +76,6 @@ function setfilms() {
     }
     return;
 }
-//console.log(setfilms());
+//setfilms();
 
-//
+//Task 44. Elements on the page + films - solved
