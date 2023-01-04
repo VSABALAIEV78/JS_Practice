@@ -53,7 +53,8 @@ promoBG[0].style.cssText = 'background: url("img/bg.jpg") center center/cover no
 
 const f1 = () => {
     for (let i = 0; i < 5; i++) {
-        film[i].innerHTML = movieDB.movies[i];
+        //film[i].innerHTML = movieDB.movies[i];
+        film[i].innerHTML = `${i+1}. ${movieDB.movies[i]}`;
     }
     return;
 };
@@ -62,8 +63,10 @@ f1();
 
 function setfilms() {
     for (let i = 0; i < 5; i++) {
-        film[i].innerHTML = movieDB.movies[i];
+        film[i].innerHTML = `${i}. ${movieDB.movies[i]}`;
     }
     return;
 }
 //console.log(setfilms());
+
+//
