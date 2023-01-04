@@ -16,17 +16,21 @@
 
 const movieDB = {
     movies: [
-        "Логан",
+        "Марвел",
+        "Логан vs",
         "Лига справедливости",
-        "Ла-ла лэнд",
+        "Ла-ла лэнд vs",
         "Одержимость",
-        "Скотт Пилигрим против..."
+        "Скотт Пилигрим против...",
+        "VSVS78"
     ]
 };
 
 const ads = document.getElementsByClassName('promo__adv'),
     genre = document.getElementsByClassName('promo__genre'),
-    promoBG = document.getElementsByClassName('promo__bg');
+    promoBG = document.getElementsByClassName('promo__bg'),
+    filmsList = document.getElementsByClassName('promo__interactive-list'),
+    film = document.getElementsByClassName('promo__interactive-item');
 
 // 1) revome ADs
 ads[0].remove();
@@ -40,7 +44,26 @@ genre[0].replaceWith(div); // сам реплейс
 
 // 3) change image bg
 
-//promoBG[0].style.background = 'url("../img/mars.webp") center center/cover no-repeat;';
-promoBG[0].style.cssText = 'background: url("./img/bg.jpg") center center/cover no-repeat;';
+promoBG[0].style.background = 'url("./img/bg.jpg") center center/cover no-repeat';
+promoBG[0].style.cssText = 'background: url("img/bg.jpg") center center/cover no-repeat;';
 
 // 4) sorting films
+
+//console.log(film[0]);
+
+const f1 = () => {
+    for (let i = 0; i < 5; i++) {
+        film[i].innerHTML = movieDB.movies[i];
+    }
+    return;
+};
+f1();
+
+
+function setfilms() {
+    for (let i = 0; i < 5; i++) {
+        film[i].innerHTML = movieDB.movies[i];
+    }
+    return;
+}
+//console.log(setfilms());
