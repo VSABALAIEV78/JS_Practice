@@ -131,8 +131,7 @@ function createCounter() {
 }
 const incr = createCounter();
 
-let x1 = incr();
-x1 = incr();
+const x1 = incr();
 const x2 = incr();
 const x3 = incr();
 
@@ -145,3 +144,5 @@ const addX = x => n => n + x;
 const addThree = addX(3);
 let d = addThree(c);
 console.log('example partial application', d);
+
+console.log(typeof (NaN));
