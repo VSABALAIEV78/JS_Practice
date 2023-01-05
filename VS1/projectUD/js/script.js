@@ -79,3 +79,137 @@ function setfilms() {
 //setfilms();
 
 //Task 44. Elements on the page + films - solved
+
+const btn1 = document.querySelectorAll('button');
+
+// btn.onclick = function () {
+//     alert('cliked 2');
+// };
+
+
+// клик
+// btn.addEventListener('click', (event) => {
+//     alert('cliked2');
+// });
+
+// ховер
+// btn.addEventListener('mouseenter', (event) => {
+//     console.log(event.target); // при ховере выводит в консоль
+//     event.target.remove(); // убирает елемент со страницы при ховере
+// });
+
+
+//let k = 0;
+
+// const deleteElement = (e) => {
+//     console.log('444');
+//     //k++;
+//     // if (k == 8) {
+//     //     btn.removeEventListener('click', deleteElement);
+//     // }
+// };
+
+
+// btn.addEventListener('click', (event) => {
+//     console.log('111');
+// });
+
+
+// let k = 0;
+
+// const deleteElement = (e) => {
+//     console.log('444');
+//     k++;
+//     if (k == 4) {
+//         btn1.removeEventListener('mouseenter', deleteElement);
+//     }
+// };
+
+
+// btn1.addEventListener('mouseenter', deleteElement);
+
+
+// let k = 0;
+
+// const deleteElement = (e) => {
+//     console.log('444');
+//     k++;
+//     if (k == 5) {
+//         btn1[0].removeEventListener('mouseenter', deleteElement);
+//     }
+// };
+
+// btn1[0].addEventListener('mouseenter', deleteElement);
+
+// /////
+
+
+
+// btn1[1].addEventListener('click', (event) => {
+//     console.log(event.target);
+//     btn1[1].remove();
+// });\\const btn1 = document.querySelector('button'); // поместили елемент в переменную
+
+let k = 0;
+
+//вынесли функцию одельно чтобы потом ее просто вызвать как аргумент в событии
+// (e) === (event)
+
+const deleteElement = (e) => {
+    console.log('444');
+    console.log(e);
+    console.log(e.target);
+    console.log(e.currentTarget);
+    k++;
+    if (k == 4) {
+        btn1[1].removeEventListener('mouseenter', deleteElement);
+    }
+};
+// после 4х ховеров событие прекратит выполнение
+
+btn1[1].addEventListener('mouseenter', deleteElement, {
+    once: true
+}); // добавили событие
+
+// 1. добавили событие 2. Ховер 4 раза 3. убрали событие после 4го ховера
+
+
+
+const ref = document.querySelector('.promo__menu-item');
+
+ref.addEventListener('mouseout', function (event) {
+    event.preventDefault();
+    console.log('gogodgo');
+});
+
+function res1(a, b) {
+    return a * b;
+}
+
+console.log(res1(3, 2));
+
+
+const res2 = function (a, b) {
+    return a + b;
+};
+
+console.log(res2(4, 3.5));
+
+const res3 = (a, b) => {
+    return a - b;
+};
+
+console.log(res3(5, 6));
+
+
+// >>>>>  child parent neibors
+
+//document.body
+//document.head
+//document.querySelector
+
+console.log(document.body.childNodes);
+console.log(document.body.firstChild);
+console.log(document.body.lastChild);
+
+console.log(document.querySelector('#current').parentNode);
