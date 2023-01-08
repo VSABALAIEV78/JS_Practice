@@ -24,50 +24,50 @@
 //         "Скотт Пилигрим против...",
 //         "А как же VSVS78"
 //     ]
-// };
+};
 
-// const ads = document.getElementsByClassName('promo__adv'),
-//     genre = document.getElementsByClassName('promo__genre'),
-//     promoBG = document.getElementsByClassName('promo__bg'),
-//     filmsList = document.getElementsByClassName('promo__interactive-list'),
-//     film = document.getElementsByClassName('promo__interactive-item'),
-//     AD = document.querySelectorAll('.promo__adv img');
+const ads = document.getElementsByClassName('promo__adv'),
+    genre = document.getElementsByClassName('promo__genre'),
+    promoBG = document.getElementsByClassName('promo__bg'),
+    filmsList = document.getElementsByClassName('promo__interactive-list'),
+    film = document.getElementsByClassName('promo__interactive-item'),
+    AD = document.querySelectorAll('.promo__adv img');
 
-// // 1) revome ADs
+// 1) revome ADs
 
-// //ads[0].remove();
+//ads[0].remove();
 
-// AD.forEach(item => {
-//     item.remove();
-// }); // уберет картинки, оставит рекламный блок
+AD.forEach(item => {
+    item.remove();
+}); // уберет картинки, оставит рекламный блок
 
-// // 2) change genre
-// const div = document.createElement('div');
-// div.classList.add('promo__genre');
-// //genre[0].after(div1); - добавляет елемент в хтмл (не обязательно если  делать replace)
-// div.innerHTML = 'ДРАМА'; // добавляет текст в div тег
-// //genre[0].replaceWith(div); // сам реплейс
-// genre[0].textContent = 'ДРРРАМА';
+// 2) change genre
+const div = document.createElement('div');
+div.classList.add('promo__genre');
+//genre[0].after(div1); - добавляет елемент в хтмл (не обязательно если  делать replace)
+div.innerHTML = 'ДРАМА'; // добавляет текст в div тег
+//genre[0].replaceWith(div); // сам реплейс
+genre[0].textContent = 'ДРРРАМА';
 
-// // 3) change image bg
+// 3) change image bg
 
-// promoBG[0].style.background = 'url("./img/bg.jpg") center center/cover no-repeat';
-// promoBG[0].style.cssText = 'background: url("img/bg.jpg") center center/cover no-repeat;';
+promoBG[0].style.background = 'url("./img/bg.jpg") center center/cover no-repeat';
+promoBG[0].style.cssText = 'background: url("img/bg.jpg") center center/cover no-repeat;';
 
-// // 4) sorting films
+// 4) sorting films
 
-// //console.log(film[0]);
+//console.log(film[0]);
 
-// movieDB.movies.sort();
+movieDB.movies.sort();
 
-// const f1 = () => {
-//     for (let i = 0; i < 5; i++) {
-//         //film[i].innerHTML = movieDB.movies[i];
-//         film[i].innerHTML = `${i+1}. ${movieDB.movies[i]}`;
-//     }
-//     return;
-// };
-// f1();
+const f1 = () => {
+    for (let i = 0; i < 5; i++) {
+        //film[i].innerHTML = movieDB.movies[i];
+        film[i].innerHTML = `${i+1}. ${movieDB.movies[i]}`;
+    }
+    return;
+};
+f1();
 
 
 // function setfilms() {
