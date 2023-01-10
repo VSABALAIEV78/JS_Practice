@@ -38,36 +38,60 @@ function fib2(arg) {
 
 }
 
+
 //console.log(fib2(10));
 
-function fibo(number) {
-    let res = [0, 1];
-    if (number > 2) {
-        for (let i = 2; i < number; i++) {
-            res[i] = res[i - 2] + res[i - 1];
-        }
-    } else {
-        return fibo(number - 2) + fibo(number - 1);
-    }
-
-    //let res01 = fibo.toString();
-    //return res01.replace(/[,]/g, ' ');
-}
-//console.log(fibo(3));
-
-
-function fibz(n) {
-    let r1 = '0';
-    if (n == 1 || n == 2) {
-        return r1 += ' 1';
-    } else {
-        return (fibz(n - 2) + fibz(n - 1));
-    }
-}
-
-//console.log(fibz(8));
-
 //0 1 1 2 3 5 8 13 21 34 55
+
+function fibo(number) {
+
+    // if (number === 0) {
+    //     return '';
+
+    // } else if (number === 1) {
+    //     return '0';
+
+    // } else if (number === 2) {
+    //     return '0 1';
+
+    if (number === 1) {
+        let c = [0, 1];
+        for (let i = 2; i < number; i++) {
+            c[i] = c[i - 2] + c[i - 1];
+        }
+        number = c[number - 1];
+        return number; // 0
+
+
+    } else {
+        //       6                   5                  4                     3                 2                       1
+        //console.log(number + fibo(number - 1)); // fibo(number - 1)   fibo(number - 1)    fibo(number - 1)    fibo(number - 1)    fibo(number - 1)
+        //                               1                  1                   2                     3                   5               8 
+        let res = number * fibo(number - 1);
+        //res -= number;
+        return res;
+    }
+}
+
+console.log(fibo(7));
+
+
+// 0    1   1   2   3   5   8   13  21
+
+// 1    2   3   4   5   6   7   8   9
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function factorial(fNum) {
     if (fNum <= 0) {
@@ -84,6 +108,6 @@ function factorial(fNum) {
 
 }
 
-console.log(factorial(9));
+//console.log(factorial(5)); // 120
 
 // Taks 47. Factorial + recursion solved
